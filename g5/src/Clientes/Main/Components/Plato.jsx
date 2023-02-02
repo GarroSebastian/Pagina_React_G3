@@ -6,10 +6,17 @@ import imagen5 from "../../Imagenes/platos/postre.png";
 import imagen6 from "../../Imagenes/platos/doritos.png";
 import imagen7 from "../../Imagenes/platos/lomo-saltado.png";
 import "./Plato.css";
+import { useNavigate } from "react-router-dom";
 
-function Plato(props){
+function Plato(){
+    const navigate = useNavigate()
+
+    const butOnClick2 = function(){
+        navigate('/carrito')
+    }
+
     return <section className="container">
-        <h1><i class=" fa fa-shopping-cart"></i></h1>
+        <button className="btn btn-dark" onClick= { butOnClick2 }> Carrito </button>
           <div className="item">
               <img width= "300px" height="186px" src={ imagen1 }/>
               <p margin="5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

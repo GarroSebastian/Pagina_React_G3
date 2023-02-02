@@ -10,6 +10,7 @@ import EntregaPedido from './Restaurantes/EntregaPedido';
 import PrincipalRestaurante from './Restaurantes/PrincipalRestaurante';
 import ListaPlatosRegistrados from './Restaurantes/ListaPlatosRegistrados';
 import Plato from './Clientes/Main/Components/Plato';
+import Carrito from './Clientes/Main/Components/Carrito';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -24,6 +25,7 @@ root.render(
         <Route path='/estado' element={<ListaPedidos/>}/>
         <Route path='/entrega' element={<EntregaPedido/>}/>
         <Route path='/platos1' element={ <Plato/>}/>
+        <Route path='/carrito' element={ <Carrito/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -19,7 +19,7 @@ function LoginForm(props) {
 
     return <form>
         <div className="login">
-            <h1 className="text-center">Bienvenido</h1>
+            
         <div>
                 <label className="form-label">Usuario:</label>
                 <input className="form-control" type="text"  
