@@ -5,7 +5,10 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import LoginPage from './Clientes/Login/LoginPage';
 import MainPage from './Clientes/Main/MainPage';
 import LoginPageR from './Restaurantes/Login/LoginPage';
-
+import ListaPedidos from './Restaurantes/ListaPedidos';
+import EntregaPedido from './Restaurantes/EntregaPedido';
+import PrincipalRestaurante from './Restaurantes/PrincipalRestaurante';
+import ListaPlatosRegistrados from './Restaurantes/ListaPlatosRegistrados';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -14,6 +17,11 @@ root.render(
         <Route path='/' element={ <LoginPage/> }/>
         <Route path='g5/main' element={ <MainPage/> }/>
         <Route path='g5/R' element={ <LoginPageR/> }/>
+        <Route path='/principal' element={<PrincipalRestaurante/>}/>
+        <Route path='/pedidos' element={<ListaPedidos/>}/>
+        <Route path='/platos' element={<ListaPlatosRegistrados/>}/>
+        <Route path='/estado' element={<ListaPedidos/>}/>
+        <Route path='/entrega' element={<EntregaPedido/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
