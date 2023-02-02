@@ -1,8 +1,11 @@
-import { useState } from "react"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import './LoginForm.css';
 
 function LoginForm(props) {
     const [usuario, setUsuario] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate()
 
     const butOnClick = function(){
         console.log("Usuario: ", usuario)
@@ -10,12 +13,13 @@ function LoginForm(props) {
         props.onLoginOk(usuario, password)
     }
 
-    const onClick2 = function(){
-        navigate("/G5/R")
+    const butOnClick2 = function(){
+        navigate("/g5/R")
     }
 
     return <form>
-        
+        <div className="login">
+            <h1 className="text-center">Bienvenido</h1>
         <div>
                 <label className="form-label">Usuario:</label>
                 <input className="form-control" type="text"  
@@ -37,9 +41,10 @@ function LoginForm(props) {
             Iniciar Sesión            
             </button>
         <button className="btn btn-primary" type="button"
-            onClick= { onClick2 }>
+            onClick= { butOnClick2 }>
             Iniciar Sesión con cuenta de Restaurante
-            </button>        
+            </button>
+        </div>        
     </form>
 
 }
