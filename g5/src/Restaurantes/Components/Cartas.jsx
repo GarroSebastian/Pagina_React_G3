@@ -1,8 +1,8 @@
 import React from "react";
 import Carta from './Carta';
-import imagen1 from '../imagenes/listaPedidos.jpeg'
-import imagen2 from '../imagenes/listaPlatos.jpeg'
-import imagen3 from '../imagenes/entregaPedido.jpeg'
+import imagen1 from '../Imagenes/listaPedidos.jpeg'
+import imagen2 from '../Imagenes/listaPlatos.jpeg'
+import imagen3 from '../Imagenes/entregaPedido.jpeg'
 
 const cartas = [
     {

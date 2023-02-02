@@ -1,6 +1,6 @@
 import ListaPedidosTable from "./Components/ListaPedidosTable";
 import './ListaPedido.css'
-import image1 from './imagenes/starbucks.png'
+import image1 from './Imagenes/starbucks.png'
 import { useLocation,useNavigate } from "react-router-dom";
 
 const pedidos = [

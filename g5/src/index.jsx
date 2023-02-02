@@ -9,6 +9,7 @@ import ListaPedidos from './Restaurantes/ListaPedidos';
 import EntregaPedido from './Restaurantes/EntregaPedido';
 import PrincipalRestaurante from './Restaurantes/PrincipalRestaurante';
 import ListaPlatosRegistrados from './Restaurantes/ListaPlatosRegistrados';
+import Plato from './Clientes/Main/Components/Plato';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -22,6 +23,7 @@ root.render(
         <Route path='/platos' element={<ListaPlatosRegistrados/>}/>
         <Route path='/estado' element={<ListaPedidos/>}/>
         <Route path='/entrega' element={<EntregaPedido/>}/>
+        <Route path='/platos1' element={ <Plato/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

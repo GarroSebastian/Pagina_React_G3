@@ -1,11 +1,11 @@
 import React from "react"
 import ListaPlatos from "./ListaPlatos"
-import imagen1 from './imagenes/cafe.png'
-import imagen2 from './imagenes/chocolate.png'
-import imagen3 from './imagenes/frapuccino.png'
-import imagen4 from './imagenes/icetea.png'
-import imagen5 from './imagenes/empanada.png'
-import imagen6 from './imagenes/galleta.png'
+import imagen1 from './Imagenes/cafe.png'
+import imagen2 from './Imagenes/chocolate.png'
+import imagen3 from './Imagenes/frapuccino.png'
+import imagen4 from './Imagenes/icetea.png'
+import imagen5 from './Imagenes/empanada.png'
+import imagen6 from './Imagenes/galleta.png'
 const listaPlatos = [
     {
         id : 1,
