@@ -3,6 +3,45 @@ import { useState } from "react"
 function LoginForm(props) {
     const [usuario, setUsuario] = useState("")
     const [password, setPassword] = useState("")
+
+    const butOnClick = function(){
+        console.log("Usuario: ", usuario)
+        console.log("Password: ", password)
+        props.onLoginOk(usuario, password)
+    }
+
+    const onClick2 = function(){
+        navigate("/G5/R")
+    }
+
+    return <form>
+        
+        <div>
+                <label className="form-label">Usuario:</label>
+                <input className="form-control" type="text"  
+                value={ usuario }
+                onChange={ function(evt) { setUsuario(evt.target.value) } }/>
+        </div>
+        <div>
+                <label className="form-label">Contraseña:</label>
+                <input className="form-control" type="password"  
+                value={ password }
+                onChange={ function(evt) { setPassword(evt.target.value) } }/>
+        </div>
+        <div className="form-group form-check">
+                <input className="form-check-input" type="checkbox" id="check"/>
+                <label className="form-check-label" for="check">Recordarme</label>
+            </div>
+        <button className="btn btn-success mt-2" type="button"
+            onClick= { butOnClick }>
+            Iniciar Sesión            
+            </button>
+        <button className="btn btn-primary" type="button"
+            onClick= { onClick2 }>
+            Iniciar Sesión con cuenta de Restaurante
+            </button>        
+    </form>
+
 }
 
 export default LoginForm

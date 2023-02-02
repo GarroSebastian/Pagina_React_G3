@@ -21,11 +21,14 @@ function LoginPage() {
             sessionStorage.setItem("DATA_USUARIO", dataUsuarioJSON)
 
 
-            navigate("/")
-
-
-            }
+            navigate("/G5/main", {
+                state: {
+                    username: usuario
+                }
+            })
+        }
     }
+    
 }
 
 export default LoginPage
