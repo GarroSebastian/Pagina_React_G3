@@ -13,8 +13,8 @@ function Categorias(props){
         <div className="card-body">
         <button className="btn btn-primary" type="button"
             onClick= { butOnClick2 }><h5 className="card-title"> { props.restaurante.nombre }</h5></button> 
-            <p className="card-text">.</p>
-            <p className="card-text"><small className="text-muted">,,,</small></p>
+            <p className="card-text">Lorem Ipsum</p>
+            <p className="card-text"><small className="text-muted">Lorem Ipsum </small></p>
         </div>
     </div>
 }

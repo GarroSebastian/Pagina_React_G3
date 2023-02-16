@@ -3,13 +3,30 @@ import LoginForm from "./Components/LoginForm"
 
 function LoginPage() {
     const navigate = useNavigate()
+    const loginHttp = async function(usuario,password){
+       const response = await fetch(
+        "http://localhost:8000/endpoints/login",
+        {
+            method : "POST",
+            body : JSON.stringify(
+                { 
+                    usuario : usuario, 
+                    password: password
+                }
+            )
+        }
+    )
+       const data = await response.json()
 
-    const onLoginOk = function(
+       return data.error
+}
+
+    const onLoginOk = async function(
         usuario, password
     ) {
-        if (usuario === "cliente"
-            && password === "123"){
-
+        const error = await loginHttp(usuario, password)
+        if (error === ""){
+            //login correcto
             const dataUsuario = {
                 username : usuario,
                 password: password
@@ -27,7 +44,10 @@ function LoginPage() {
                     username: usuario
                 }
             })
+        }else {
+            console.error(error)
         }
+        
     }
     
     return  <div className="row">

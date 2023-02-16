@@ -28,7 +28,7 @@ function ListaPedidos(){
 const location = useLocation()
 const navigate = useNavigate()
 return <div className="general">
-    <h1 className="display-1 text-center">Lista Pedidos</h1>
+    
     <img src={image1} className="container d-flex justify-content-center col-md-1" />
             <div className="container">
                         {
