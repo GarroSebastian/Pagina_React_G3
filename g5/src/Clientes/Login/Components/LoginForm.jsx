@@ -2,14 +2,36 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function LoginForm(props) {
-    const [usuario, setUsuario] = useState("")
+    const [username, setUsuario] = useState("")
     const [password, setPassword] = useState("")
+    const [error, setError] = useState(null)
+
+    const handleLogin = async (e) => {
+        e.preventDefault()
+        
+        const response = await fetch('/api/accounts/login/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username : username,
+                password : password
+            })
+        })
+        if(response.ok){
+            window.location.href = '/g5/main'
+        }else {
+            const data = await response.json()
+            setError(data.error)
+        }
+    }
     const navigate = useNavigate()
 
     const butOnClick = function(){
-        console.log("Usuario: ", usuario)
+        console.log("Usuario: ", username)
         console.log("Password: ", password)
-        props.onLoginOk(usuario, password)
+        props.onLoginOk(username, password)
     }
 
     const butOnClick2 = function(){
@@ -22,7 +44,7 @@ function LoginForm(props) {
         <div>
                 <label className="form-label">Usuario:</label>
                 <input className="form-control" type="text"  
-                value={ usuario }
+                value={ username }
                 onChange={ function(evt) { setUsuario(evt.target.value) } }/>
         </div>
         <div>
