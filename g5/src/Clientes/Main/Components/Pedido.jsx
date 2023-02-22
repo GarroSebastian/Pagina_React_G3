@@ -29,15 +29,12 @@ function Pedido(){
                         Apellido es necesario.
                     </div>
                 </div>
-                <div className="col-md-4">
-                    <label for="edificio"
-                    className="form-label">Edificio</label>
-                    <select id="edificio"
-                    className="form-control">
-                    <option value="">Elegir...
-                    </option>
-                    <option value="L3">L3</option>
-                </select>
+                <div className="col-sm-6">
+                    <label for="lastName" className="form-label">Telefono</label>
+                    <input id="lastName" type="tel" className="form-control" required/>
+                    <div className="invalid-feedback">
+                        Numero telefono es necesario.
+                    </div>
                 </div>
             </div>
             <div className="col-md-4">
