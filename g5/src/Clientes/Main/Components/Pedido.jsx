@@ -50,10 +50,10 @@ function Pedido(){
                     <option value="302">302</option>
                 </select>
                 </div>
-               
+                </form>
                 </div>
                 </body>
-            </form>
+        
     
         
     
