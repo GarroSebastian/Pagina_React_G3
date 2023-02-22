@@ -10,7 +10,7 @@ function Login_Page() {
     const loginConfirmation = async function(usuario, password) {
         if (usuario !== "" && password !=="") {
             const response = await fetch(
-              `http://localhost:8000/clientes/login`,
+              `http://localhost:8000/endpoints/login`,
               {
                   method : "POST",
                   body : JSON.stringify(
@@ -26,7 +26,7 @@ function Login_Page() {
               const dataUsuario = {
                 userID : data.userid
               }
-              navigate("/ec1-nota2/CategoriasLocales")
+              navigate("g5/Restaurantes")
 
       
               const dataUsuarioJSON = JSON.stringify(dataUsuario)
