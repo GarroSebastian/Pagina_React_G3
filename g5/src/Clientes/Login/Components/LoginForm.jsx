@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './LoginForm.css';
 
 function LoginForm(props) {
     const [usuario, setUsuario] = useState("")
@@ -14,7 +13,7 @@ function LoginForm(props) {
     }
 
     const butOnClick2 = function(){
-        navigate("/g5/R")
+        navigate("/g5/Restaurantes")
     }
 
     return <form>

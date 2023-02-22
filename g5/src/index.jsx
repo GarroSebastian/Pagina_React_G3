@@ -1,7 +1,10 @@
+import { findAllByTestId } from '@testing-library/react'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Login_Page from './Restaurantes/Login_Page';
 import LoginPage from './Clientes/Login/LoginPage';
 import MainPage from './Clientes/Main/MainPage';
 import LoginPageR from './Restaurantes/Login/LoginPage';
@@ -11,12 +14,16 @@ import PrincipalRestaurante from './Restaurantes/PrincipalRestaurante';
 import ListaPlatosRegistrados from './Restaurantes/ListaPlatosRegistrados';
 import Plato from './Clientes/Main/Components/Plato';
 import Carrito from './Clientes/Main/Components/Carrito';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={ <LoginPage/> }/>
+        <Route path='/' element={ <Login_Page/> }/>
+        <Route path='/g5/Login' element={ <LoginPage/> }/>
+        <Route path='/g5/Restaurantes' element={ <Login_Page/> }/>
         <Route path='g5/main' element={ <MainPage/> }/>
         <Route path='g5/R' element={ <LoginPageR/> }/>
         <Route path='/principal' element={<PrincipalRestaurante/>}/>
