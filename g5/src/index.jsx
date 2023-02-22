@@ -14,6 +14,7 @@ import PrincipalRestaurante from './Restaurantes/PrincipalRestaurante';
 import ListaPlatosRegistrados from './Restaurantes/ListaPlatosRegistrados';
 import Plato from './Clientes/Main/Components/Plato';
 import Carrito from './Clientes/Main/Components/Carrito';
+import Pedido from './Clientes/Main/Components/Pedido';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -26,6 +27,7 @@ root.render(
         <Route path='/g5/Restaurantes' element={ <Login_Page/> }/>
         <Route path='g5/main' element={ <MainPage/> }/>
         <Route path='g5/R' element={ <LoginPageR/> }/>
+        <Route path='g5/pedido' element = { <Pedido/>}/>
         <Route path='/principal' element={<PrincipalRestaurante/>}/>
         <Route path='/pedidos' element={<ListaPedidos/>}/>
         <Route path='/platos' element={<ListaPlatosRegistrados/>}/>

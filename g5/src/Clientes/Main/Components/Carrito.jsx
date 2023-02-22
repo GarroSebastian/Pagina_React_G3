@@ -201,7 +201,7 @@ function Carrito(){
                             <p className="mb-2">S./68</p>
                           </div>
       
-                          <a href="/pedido.html"><button type="button" className="btn btn-info btn-block btn-lg">
+                          <a href="g5/pedido"><button type="button" className="btn btn-info btn-block btn-lg">
                             <div className="d-flex justify-content-between">
                               <span>S/.68</span>
                               <span>Checkout <i className="fas fa-long-arrow-alt-right ms-2"></i></span>
