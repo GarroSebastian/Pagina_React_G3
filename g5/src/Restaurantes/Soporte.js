@@ -24,7 +24,7 @@ export function Soporte(props) {
         }
       )
       const data = await response.json()
-      if (data.error == ""){
+      if (data.error === ""){
         console.log("SOPORTE SOLICITADO")
       } else {
           console.error(data.error  )
@@ -40,12 +40,12 @@ export function Soporte(props) {
   const [tipoproblema, setTipoproblema] = useState("")
   const [problema, setProblema] = useState("")
 
-  const butOnClick = function() {
+  const butOnClick = function(props) {
       console.log("nombre:", nombre)
       console.log("correo:", correo)
       console.log("tipoproblema:", tipoproblema)
       console.log("problema:", problema) 
-      props.sopConfirmation(nombre, correo, tipoproblema, problema)
+      sopConfirmation(nombre, correo, tipoproblema, problema)
   }
 
   const navigate = useNavigate()
@@ -107,7 +107,7 @@ export function Soporte(props) {
         {/*Grid row*/}
       </form>
       <div className="text-center text-md-left">
-        <a className="btn btn-primary" onclick={butOnClick}>Enviar</a>
+        <a className="btn btn-primary" onClick={butOnClick}>Enviar</a>
       </div>
       <div className="status" />
     </div>
