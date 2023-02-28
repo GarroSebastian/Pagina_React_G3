@@ -26,7 +26,7 @@ function Login_Page() {
               const dataUsuario = {
                 userID : data.userid
               }
-              navigate("g5/Soporte")
+              navigate("/ec1-nota2/Iniciorestaurante")
 
       
               const dataUsuarioJSON = JSON.stringify(dataUsuario)
