@@ -23,11 +23,11 @@ export function Iniciorestaurante(props) {
     }) 
   }
   const butOnClick5 = function() {
-    navigate("/ec1-nota2/CategoriasLocales", {
+    navigate("/g5/Platos", {
     }) 
   }
   const butOnClick6 = function() {
-    navigate("/Restaurantes/Login_Page", {
+    navigate("/g5/Soporte", {
     }) 
   }
 

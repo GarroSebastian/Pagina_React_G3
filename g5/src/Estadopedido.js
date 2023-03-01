@@ -4,6 +4,9 @@ import './Styles_Estadopedido.css';
 
 
 
+
+
+
 const RestaurantCard = ({ data }) => (
 
   <div>
@@ -164,7 +167,11 @@ const RestaurantCard = ({ data }) => (
 );
 
 const Estadopedido = () => {
+
+
   
+  
+
   const [pedidoDatos, setPedidoDatos] = useState({});
 
   useEffect(() => {
