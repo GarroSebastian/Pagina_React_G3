@@ -1,15 +1,31 @@
 import { useNavigate} from 'react-router-dom'
 import LoginForm from './Components/LoginForm'
+
 function LoginPage(){
     const navigate = useNavigate()
+    const loginHttp = async function(usuario,password){
+        const response = await fetch(
+            "http://localhost:8000/endpoints/loginR",
+            {
+                method : "POST",
+                body : JSON.stringify(
+                    {
+                        usuario : usuario,
+                        password: password
+                    }
+                )
+            }
+        )
+        const data = await response.json()
 
-    const onLoginOk = function(
+        return data.error
+    }
+    const onLoginOk =async function(
         usuario, password
     ) {
-        if (usuario === "restaurante"
-            && password === "123"){
-
-            const dataUsuario = {
+        const error = await loginHttp(usuario,password)
+            if(error ===""){
+                const dataUsuario ={
                 username : usuario,
                 password: password
             }
@@ -26,6 +42,8 @@ function LoginPage(){
                     username: usuario
                 }
             })
+        }else {
+            console.error(error)
         }
     }
     

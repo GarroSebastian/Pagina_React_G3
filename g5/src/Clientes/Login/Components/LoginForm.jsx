@@ -35,7 +35,7 @@ function LoginForm(props) {
     }
 
     const butOnClick2 = function(){
-        navigate("/g5/Restaurantes")
+        navigate("/")
     }
 
     return <form>
