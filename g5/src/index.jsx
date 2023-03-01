@@ -15,7 +15,6 @@ import Platos from './Clientes/Main/MainPage';
 import LoginPageR from './Restaurantes/Login/LoginPage';
 import ListaPedidos from './Restaurantes/ListaPedidos';
 import EntregaPedido from './Restaurantes/EntregaPedido';
-import PrincipalRestaurante from './Restaurantes/PrincipalRestaurante';
 import Pedido from './Clientes/Main/Components/Pedido';
 import Carrito from './Clientes/Main/Components/Carrito';
 
@@ -37,7 +36,6 @@ root.render(
         <Route path='/g5/main' element={ <MainPage/> }/>
         <Route path='g5/R' element={ <LoginPageR/> }/>
         <Route path='g5/pedido' element = { <Pedido/>}/>
-        <Route path='/principal' element={<PrincipalRestaurante/>}/>
         <Route path='/pedidos' element={<ListaPedidos/>}/>
         <Route path='/estado' element={<ListaPedidos/>}/>
         <Route path='/entrega' element={<EntregaPedido/>}/>
