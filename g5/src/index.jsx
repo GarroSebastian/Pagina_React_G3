@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Estadopedido from "./Estadopedido";
+import Estadopedido_Error from "./Estadopedido_Error";
+import Iniciorestaurante from "./Iniciorestaurante";
 import Login_Page from './Restaurantes/Login_Page';
 import Soporte from './Restaurantes/Soporte';
 import LoginPage from './Clientes/Login/LoginPage';
@@ -26,6 +29,9 @@ root.render(
       <Routes>
         <Route path='/' element={ <Login_Page/> }/>
         <Route path='/g5/Login' element={ <LoginPage/> }/>
+        <Route path='/ec1-nota2/Iniciorestaurante' element={ <Iniciorestaurante/> } />
+        <Route path='/ec1-nota2/Estadopedido' element={ <Estadopedido/> } />
+        <Route path='/ec1-nota2/Estadopedido_Error' element={ <Estadopedido_Error/> } />        
         <Route path='/g5/Soporte' element={ <Soporte/> }/>
         <Route path='/g5/main' element={ <MainPage/> }/>
         <Route path='g5/R' element={ <LoginPageR/> }/>
