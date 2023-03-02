@@ -10,7 +10,7 @@ function Login_Page() {
     const loginConfirmation = async function(usuario, password) {
         if (usuario !== "" && password !=="") {
             const response = await fetch(
-              `http://localhost:8000/endpoints/login`,
+              `http://localhost:8000/endpoints/loginR`,
               {
                   method : "POST",
                   body : JSON.stringify(

@@ -6,7 +6,7 @@ function Categorias(props){
 
     const butOnClick2 = function(){
         //navigate(`/platos1/${props.restaurante.id}`)
-        navigate(`/platos1/${props.restaurante.id}`)
+        navigate(`/platos1/${props.restaurante.id}`, {state: {restaurante: props.restaurante}})
     }
     const isRestaurantOpen = props.restaurante.abierto
 

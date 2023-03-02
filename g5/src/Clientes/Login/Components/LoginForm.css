@@ -16,6 +16,15 @@ body {
     background: peru;
 }
 
+.label-color{
+    color:black;
+}
+
+.check-color{
+    color:black;
+}
+
+
 .login {
     width: 360px;
     height: min-content;
